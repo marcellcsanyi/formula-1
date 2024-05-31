@@ -1,0 +1,156 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.grid {
+  width: 1000px;
+  margin: auto;
+}
+
+.grid .driver {
+  background-color: #bac7d5;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-radius: 50px;
+  padding: 0 20px 0 0;
+  transform: scaleX(1);
+  transition: all .5s ease;
+  box-shadow: 2px 2px 2px 2px #1976d2;
+}
+
+.grid .driver .driver-img {
+  position: relative;
+  height: 200px;
+}
+
+.grid .driver .driver-img .picture {
+  height: 100%;
+}
+
+.grid .driver .driver-img .flag {
+  position: absolute;
+  bottom: 10px;
+  right: -10px;
+}
+
+.grid .driver.first-place {
+  box-shadow: 2px 2px 2px 2px gold;
+}
+
+.grid .driver.second-place {
+  box-shadow: 2px 2px 2px 2px silver;
+}
+
+.grid .driver.third-place {
+  box-shadow: 2px 2px 2px 2px #CD7F32;
+}
+
+.grid .driver.overtake {
+  transform: scaleX(0);
+  transition: all .5s ease;
+}
+
+.grid .driver .place {
+  flex-basis: 0;
+}
+
+.grid .driver .place .medal {
+  color: white;
+  font-size: 32pt;
+  background-color: #1976d2;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  line-height: 90px;
+  font-weight: bold;
+}
+
+.grid .driver .place.pos-1 .medal {
+  background-color: gold;
+  color: #1976d2;
+}
+
+.grid .driver .place.pos-2 .medal {
+  background-color: silver;
+  color: #1976d2;
+}
+
+.grid .driver .place.pos-3 .medal {
+  background-color: #CD7F32;
+  color: #1976d2;
+}
+
+.grid .driver .picture {
+  height: 200px;
+}
+
+.grid .driver .name_container {
+  font-size: 32px;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid .driver .name_container .name {
+  flex-basis: 25%;
+  font-weight: bold;
+}
+
+.grid .driver .name_container .team {
+  font-style: italic;
+}
+
+.grid .driver .name_container img {
+  height: 64px;
+  width: 64px;
+  margin: auto 20px auto 5px;
+}
+
+.grid .driver .overtake_btn {
+  height: 60px;
+  margin: auto 0;
+  font-size: 18pt;
+  padding-bottom: 0px;
+}
+
+.grid .driver:first-child .overtake_btn {
+  visibility: hidden;
+}
