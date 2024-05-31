@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "install-api": "cd ./api && npm install",
     "start-api": "cd ./api && npm start",
+    "install-client": "cd ./client && npm install",
     "start-client": "cd ./client && npm start"
   }
 }
